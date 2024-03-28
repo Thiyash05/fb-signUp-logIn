@@ -1,0 +1,111 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+
+/* start of log in section */
+.sec{
+	margin-top:60px;
+}
+.row{
+	align-items:center;
+	justify-content:center;
+}
+.log-title h2{
+	font-size:60px;
+	font-weight:700;
+
+}
+.log-title p{
+	font-size:28px;
+}
+
+
+
+
+
+.log-sec{
+	margin-top:60px;
+}
+.log-row{
+	align-items:center;
+	justify-content:center;
+}
+.log-title h1{
+	text-align:center;
+	font-size:60px;
+	font-weight:700;
+	margin:20px;
+	
+}
+/* end of log in section */
+
+
+
+
+
+/* start of sign up section */
+.sign-row{
+	display:flex;
+	justify-content:center;
+}
+.fb-title{
+	text-align:center;
+}
+
+.select-row{
+	display:flex;
+}
+.radio-row{
+	display:flex;
+}
+.radio-row .form-check{
+	border: 1px solid #80808073;
+    margin: 2px;
+    padding: 6px 77px;
+	margin-top: -7px;
+	border-radius: 5px;
+}
+.col-12 .form-check{
+	padding: 3px 28px;
+}
+.gender-para{
+	padding-top: 8px;
+}
+.sign-title h1{
+	text-align:center;
+	font-size:60px;
+	font-weight:700;
+	margin:20px;
+}
+
+
+
+/* end of sign up section */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

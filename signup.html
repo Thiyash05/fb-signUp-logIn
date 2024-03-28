@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<title>Sign up</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<!-- start of sign up section -->
+
+    <section class="section">
+	    <div class="container">
+		    <div class="sign-title">
+		        <h1 class="text-primary">facebook</h1>
+			</div>			
+		<form id="form">	
+		    <div class="sign-row">		
+				<div class="col-lg-7 col-12">
+                    <div class="shadow  card">
+                        <div class="card-body">	
+                            <div class="fb-title">						
+								<h2>Create a new account</h2>						
+								<p>It's quick and easy.</p>
+							</div>
+							
+							<hr>
+							
+							 
+					
+						    <div class="row">
+							  <div class="col">
+								<input type="text" class="form-control" id="firstName" placeholder="First name" aria-label="First name">
+							  </div>
+							  <div class="col">
+								<input type="text" class="form-control" id="lastName" placeholder="Last name" aria-label="Last name">
+							  </div>
+							  
+							  <div class="input-group input-group-lg p-3">
+                                <input type="text" class="form-control" id="email" placeholder="Email address or Phone no" aria-label="Username">
+						        <div id="result1">
+								
+								</div>
+							   
+							   </div>
+							
+								<div class="input-group input-group-lg p-3">
+									<input type="text" class="form-control" id="pass" placeholder="New Password" aria-label="Username">
+									<div id="result2">
+									
+									</div>
+									
+								</div>
+								
+								
+								
+								<p>Date f birth</p>
+								    <div class="select-row">
+										<select class="form-select" aria-label="Default select example">
+										 
+										  <option value="1">One</option>
+										  <option value="2">Two</option>
+										  <option value="3">Three</option>
+										</select>
+										
+										 <select class="form-select" aria-label="Default select example">
+										 
+										  <option value="1">One</option>
+										  <option value="2">Two</option>
+										  <option value="3">Three</option>
+										</select>
+										
+										 <select class="form-select" aria-label="Default select example">
+										 
+										  <option value="1">One</option>
+										  <option value="2">Two</option>
+										  <option value="3">Three</option>
+										</select>
+								
+									</div>	
+									
+                                <p class="gender-para">Gender</p>
+                                    <div class="radio-row">
+									
+									    <div class="form-check">
+										  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+										  <label class="form-check-label" for="flexRadioDefault1">
+											Female
+										  </label>
+										</div>
+										<div class="form-check">
+										  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+										  <label class="form-check-label" for="flexRadioDefault2">
+											Male
+										  </label>
+										</div>
+										
+										<div class="form-check">
+										  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+										  <label class="form-check-label" for="flexRadioDefault2">
+										    Custom
+										  </label>
+										</div>
+									
+									</div>
+									
+							    <p>People who use our service may have uploaded your contact information to Facebook. <a href="#" class="text-decoration-none text-primary" >Learn more.</a></p>
+									
+								<p>By clicking Register, you agree to our <a href="#" class="text-decoration-none text-primary" >Terms , Privacy Policy</a> and <a href="#" class="text-decoration-none text-primary" >Cookies Policy .</a> You can receive SMS
+								notifications from us and you can stop receiving notifications at any time.</p>
+
+	                            <div class="d-grid gap-2 col-6 mx-auto">
+                                    <button class="btn btn-success btn-lg" type="submit">Sign up</button>
+ 
+                                </div>
+																
+							    <p class="text-center"><a href="#" class="text-decoration-none text-primary">Already have an account?</p>
+							  
+							</div>
+					    	
+						
+						</div>
+				    </div>	
+		        </div>
+            </div>
+		 </form> 
+        </div>
+	</section>
+	
+		<script>
+		    var form=document.querySelector("#form");
+			
+			form.addEventListener('submit',storeData)
+			function storeData(e){
+			    e.preventDefault();
+				
+				var firstName=document.getElementById("firstName").value;
+                var lastName=document.getElementById("lastName").value;
+
+				var email=document.querySelector("#email").value;
+				var pass=document.querySelector("#pass").value;
+				var result1=document.getElementById("result1");
+				var result2=document.getElementById("result2");
+                     
+			    <!-- console.log("click"); -->
+				
+			    <!-- console.log(email,pass); -->
+				
+				
+				if((email=="") || (email<0)||(email==null)){
+					result1.innerHTML="Enter a corret email address";	
+					result1.style.color="red"
+
+				}
+				
+				else if((pass=="") || (pass<0)||(pass==null)){
+					result1.innerHTML="Enter a corret password";	
+					result1.style.color="red"
+
+				}
+		
+				else{
+				    localStorage.setItem("Email_address",email)
+					localStorage.setItem("Password",pass)
+				    alert("Signup Successfully");
+					location.href="login.html"
+					
+				}
+			
+			}
+			
+
+		</script>
+  
+<!-- end of sign up section -->
